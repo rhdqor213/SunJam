@@ -102,6 +102,7 @@
      <Compile Include="Assets\Resources\Models\RoomEscape001\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
      <Compile Include="Assets\Resources\Models\RoomEscape001\Scripts\HeadControl.cs" />
      <Compile Include="Assets\Scripts\SceneChange.cs" />
+     <Compile Include="Assets\Scripts\TextManager.cs" />
      <None Include="Assets\Resources\Models\RoomEscape001\PostProcessing\Resources\Shaders\ScreenSpaceReflection.shader" />
      <None Include="Assets\Resources\Models\RoomEscape001\PostProcessing\Resources\Shaders\GrainGen.shader" />
      <None Include="Assets\Resources\Models\RoomEscape001\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />
