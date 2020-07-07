@@ -1,0 +1,179 @@
+fileFormatVersion: 2
+guid: d7fb9de13245b624b8644bafdcada6f8
+timeCreated: 1490624420
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Obj_scale01_1
+    100004: Obj_scale01_2
+    100006: Obj_scale01_3
+    100008: Obj_scale01_4
+    100010: Obj_scale01_5
+    100012: Obj_scale01_6
+    100014: Obj_scale01_pendulum1
+    100016: Obj_scale01_pendulum2
+    100018: Obj_scale01_pendulum3
+    100020: Obj_scale01_pendulum5
+    100022: Scale01_body
+    100024: Scale01_drawer
+    100026: Scale01_head
+    100028: Scale01_pendulum1
+    100030: Scale01_pendulum2
+    100032: Scale01_pendulum3
+    100034: Scale01_pendulum4
+    100036: Scale01_shackle
+    100038: Scale01_left
+    100040: Scale01_right
+    400000: //RootNode
+    400002: Obj_scale01_1
+    400004: Obj_scale01_2
+    400006: Obj_scale01_3
+    400008: Obj_scale01_4
+    400010: Obj_scale01_5
+    400012: Obj_scale01_6
+    400014: Obj_scale01_pendulum1
+    400016: Obj_scale01_pendulum2
+    400018: Obj_scale01_pendulum3
+    400020: Obj_scale01_pendulum5
+    400022: Scale01_body
+    400024: Scale01_drawer
+    400026: Scale01_head
+    400028: Scale01_pendulum1
+    400030: Scale01_pendulum2
+    400032: Scale01_pendulum3
+    400034: Scale01_pendulum4
+    400036: Scale01_shackle
+    400038: Scale01_left
+    400040: Scale01_right
+    2300000: Obj_scale01_1
+    2300002: Obj_scale01_2
+    2300004: Obj_scale01_3
+    2300006: Obj_scale01_4
+    2300008: Obj_scale01_5
+    2300010: Obj_scale01_6
+    2300012: Obj_scale01_pendulum1
+    2300014: Obj_scale01_pendulum2
+    2300016: Obj_scale01_pendulum3
+    2300018: Obj_scale01_pendulum5
+    2300020: Scale01_body
+    2300022: Scale01_drawer
+    2300024: Scale01_head
+    2300026: Scale01_pendulum1
+    2300028: Scale01_pendulum2
+    2300030: Scale01_pendulum3
+    2300032: Scale01_pendulum4
+    2300034: Scale01_shackle
+    2300036: Scale01_left
+    2300038: Scale01_right
+    3300000: Obj_scale01_1
+    3300002: Obj_scale01_2
+    3300004: Obj_scale01_3
+    3300006: Obj_scale01_4
+    3300008: Obj_scale01_5
+    3300010: Obj_scale01_6
+    3300012: Obj_scale01_pendulum1
+    3300014: Obj_scale01_pendulum2
+    3300016: Obj_scale01_pendulum3
+    3300018: Obj_scale01_pendulum5
+    3300020: Scale01_body
+    3300022: Scale01_drawer
+    3300024: Scale01_head
+    3300026: Scale01_pendulum1
+    3300028: Scale01_pendulum2
+    3300030: Scale01_pendulum3
+    3300032: Scale01_pendulum4
+    3300034: Scale01_shackle
+    3300036: Scale01_left
+    3300038: Scale01_right
+    4300000: Obj_scale01_pendulum1
+    4300002: Obj_scale01_1
+    4300004: Obj_scale01_2
+    4300006: Obj_scale01_5
+    4300008: Obj_scale01_6
+    4300010: Obj_scale01_4
+    4300012: Obj_scale01_3
+    4300014: Obj_scale01_pendulum2
+    4300016: Obj_scale01_pendulum3
+    4300018: Obj_scale01_pendulum5
+    4300020: Scale01_pendulum4
+    4300022: Scale01_body
+    4300024: Scale01_head
+    4300026: Scale01_drawer
+    4300028: Scale01_shackle
+    4300030: Scale01_pendulum3
+    4300032: Scale01_pendulum2
+    4300034: Scale01_pendulum1
+    4300036: Scale01_right
+    4300038: Scale01_left
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

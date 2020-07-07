@@ -1,0 +1,150 @@
+fileFormatVersion: 2
+guid: 423ffecee667c2241954577aeb1dbce0
+timeCreated: 1497950394
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: BodyB
+    100002: LeftB1
+    100004: LeftB2
+    100006: LeftB3
+    100008: LeftB4
+    100010: //RootNode
+    100012: Openbook01
+    100014: Openbook01_paper
+    100016: PaperB1
+    100018: PaperB2
+    100020: PaperB3
+    100022: PaperB4
+    100024: PaperB5
+    100026: PaperB6
+    100028: PaperB7
+    100030: RightB1
+    100032: RightB2
+    100034: RightB3
+    100036: RightB4
+    100038: RootB
+    100040: IK Chain001
+    100042: Line001
+    100044: PaperB8
+    100046: PaperB9
+    100048: Point001
+    100050: Point002
+    100052: Point003
+    100054: Point004
+    100056: Point005
+    100058: Point006
+    100060: Point007
+    100062: Point008
+    100064: Point009
+    400000: BodyB
+    400002: LeftB1
+    400004: LeftB2
+    400006: LeftB3
+    400008: LeftB4
+    400010: //RootNode
+    400012: Openbook01
+    400014: Openbook01_paper
+    400016: PaperB1
+    400018: PaperB2
+    400020: PaperB3
+    400022: PaperB4
+    400024: PaperB5
+    400026: PaperB6
+    400028: PaperB7
+    400030: RightB1
+    400032: RightB2
+    400034: RightB3
+    400036: RightB4
+    400038: RootB
+    400040: IK Chain001
+    400042: Line001
+    400044: PaperB8
+    400046: PaperB9
+    400048: Point001
+    400050: Point002
+    400052: Point003
+    400054: Point004
+    400056: Point005
+    400058: Point006
+    400060: Point007
+    400062: Point008
+    400064: Point009
+    4300000: Openbook01
+    4300002: Openbook01_paper
+    7400000: Openbook01
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: Openbook01
+    13700002: Openbook01_paper
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

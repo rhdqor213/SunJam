@@ -1,0 +1,15 @@
+
+=== Tue Jul  7 01:31:42 2020
+
+Packages were changed.
+Update Mode: resetToDefaultDependencies
+
+The following packages were 업데이트됨:
+  com.unity.timeline 1.2.6 버전에서 1.2.14버전으로The following packages were 삭제됨:
+  com.unity.2d.sprite@1.0.0
+  com.unity.2d.tilemap@1.0.0
+  com.unity.ads@3.4.5
+  com.unity.analytics@3.3.5
+  com.unity.multiplayer-hlapi@1.0.6
+  com.unity.purchasing@2.0.6
+  com.unity.xr.legacyinputhelpers@2.1.4
