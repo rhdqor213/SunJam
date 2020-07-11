@@ -200,6 +200,7 @@
      <None Include="Assets\Resources\AssetStore\RoomEscape001\PostProcessing\Resources\Shaders\AmbientOcclusion.cginc" />
      <None Include="Assets\Resources\AssetStore\Table and chair\Standard Assets\Effects\CinematicEffects(ALPHA)\AntiAliasing\Shaders\SMAA.cginc" />
      <None Include="Assets\Resources\AssetStore\Table and chair\Standard Assets\Effects\ImageEffects\Shaders\TwirlEffect.shader" />
+     <None Include="Assets\Resources\AssetStore\Horror SFX - 082918\Notes.txt" />
      <None Include="Assets\Resources\AssetStore\Table and chair\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Apply.shader" />
      <None Include="Assets\Resources\AssetStore\Table and chair\Standard Assets\Effects\ToonShading\Shaders\ToonLitOutline.shader" />
      <None Include="Assets\Resources\AssetStore\Table and chair\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Adaptation.shader" />

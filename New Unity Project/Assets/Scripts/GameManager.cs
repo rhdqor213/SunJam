@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -23,17 +24,37 @@ public class GameManager : MonoBehaviour
                 string targetName = hitInfo.collider.gameObject.name;
                 Debug.Log(targetName);
                 string index = "";
-                for (int i = 0; i < targetName.Length; i++)
+                if (targetName[0] == 'd')
                 {
-                    if (targetName[i] == '-')
+                    string str = "";
+                    for(int i = 1; i < 4; i++)
                     {
-                        for (int j = i + 1; j < targetName.Length; j++)
+                        str += targetName[i];
+                    }
+                    if (str == "oor")
+                    {
+                        for(int i = 5; i < targetName.Length; i++)
                         {
-                            index += targetName[j];
+                            index += targetName[i];
                         }
                         Debug.Log(int.Parse(index));
-                        cm.MoveCam(-int.Parse(index));
-                        break;
+                        cm.FadeCam(int.Parse(index));
+                    }
+                }
+                else
+                {
+                    for (int i = 0; i < targetName.Length; i++)
+                    {
+                        if (targetName[i] == '-')
+                        {
+                            for (int j = i + 1; j < targetName.Length; j++)
+                            {
+                                index += targetName[j];
+                            }
+                            Debug.Log(int.Parse(index));
+                            cm.MoveCam(-int.Parse(index));
+                            break;
+                        }
                     }
                 }
             }
