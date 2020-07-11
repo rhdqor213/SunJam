@@ -40,6 +40,7 @@ public class CameraMove : MonoBehaviour
     Quaternion fromRot = new Quaternion();
     int cur = 0;
     bool isMove = false;
+    float mvtimer = 0;
     void Start()
     {
         gameObject.transform.SetPositionAndRotation(ci[0].pos, ci[0].rot);
@@ -53,14 +54,14 @@ public class CameraMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        mvtimer += Time.deltaTime;
         if (isMove)
         {
             transform.position = Vector3.MoveTowards(transform.position, targetPos,
             Vector3.Distance(fromPos, targetPos) * mvSpeed * Time.deltaTime);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRot,
                 Quaternion.Angle(fromRot, targetRot) * Time.deltaTime * rtSpeed);
-            if (transform.position == targetPos
-            && transform.rotation == targetRot)
+            if (mvtimer >= mvSpeed)
             {
                 isMove = false;
                 for (int i = 0; i < 4; i++)
@@ -84,6 +85,7 @@ public class CameraMove : MonoBehaviour
             fromPos = transform.position;
             fromRot = transform.rotation;
             isMove = true;
+            mvtimer = 0;
         }
     }
 }

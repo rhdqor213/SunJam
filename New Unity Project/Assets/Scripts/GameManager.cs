@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
                             index += targetName[j];
                         }
                         Debug.Log(int.Parse(index));
-                       cm.MoveCam(-int.Parse(index));
+                        cm.MoveCam(-int.Parse(index));
                         break;
                     }
                 }
