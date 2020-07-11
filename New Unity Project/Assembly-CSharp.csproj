@@ -157,12 +157,12 @@
      <Compile Include="Assets\Resources\AssetStore\Table and chair\Standard Assets\Effects\ImageEffects\Scripts\Twirl.cs" />
      <Compile Include="Assets\Resources\AssetStore\Table and chair\Standard Assets\Effects\ImageEffects\Scripts\VignetteAndChromaticAberration.cs" />
      <Compile Include="Assets\Resources\AssetStore\Table and chair\Standard Assets\Effects\ImageEffects\Scripts\Vortex.cs" />
+     <Compile Include="Assets\Scripts\CameraMove.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\SceneChange.cs" />
      <Compile Include="Assets\Scripts\Setting.cs" />
      <Compile Include="Assets\Scripts\TextManager.cs" />
      <Compile Include="Assets\Scripts\TextureScaler.cs" />
-     <Compile Include="Assets\Scripts\cameraMove.cs" />
      <None Include="Assets\Resources\AssetStore\Table and chair\Standard Assets\Effects\ImageEffects\Shaders\Tonemapper.shader" />
      <None Include="Assets\Resources\AssetStore\RoomEscape001\PostProcessing\Resources\Shaders\ScreenSpaceReflection.shader" />
      <None Include="Assets\Resources\AssetStore\Table and chair\Standard Assets\Effects\ImageEffects\Shaders\GlobalFog.shader" />

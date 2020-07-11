@@ -5,79 +5,85 @@ using TMPro.EditorUtilities;
 using UnityEditor;
 using UnityEngine;
 
-public class cameraMove : MonoBehaviour
+public class CamInfo
+{
+    public Vector3 pos;
+    public Quaternion rot;
+    public int[] mb;
+    public CamInfo(Vector3 _pos, Quaternion _rot, int[] _mb)
+    {
+        pos = _pos;
+        rot = _rot;
+        mb = _mb;
+    }
+}
+
+public class CameraMove : MonoBehaviour
 {
     // Start is called before the first frame update
-    
+    CamInfo[] ci = new CamInfo[] {
+        new CamInfo(new Vector3(410.3f, 2.722f, -311f), Quaternion.Euler(0f, 0f, 0f), new int[] {-1, -1, 3, 1}),
+        new CamInfo(new Vector3(409.22f, 2.722f, -310.57f), Quaternion.Euler(0f, 90f, 0f), new int[] {-1, -1, 0, 2}),
+        new CamInfo(new Vector3(410.3f, 2.722f, -310.18f), Quaternion.Euler(0f, 180f, 0f), new int[] {-1, -1, 1, 3}),
+        new CamInfo(new Vector3(410.94f, 2.722f, -310.57f), Quaternion.Euler(0f, 270f, 0f), new int[] {-1, -1, 2, 0}),
+        new CamInfo(new Vector3(409.58f, 2.19f, -308.87f), Quaternion.Euler(30f, -45f, 0f), new int[] {-1, 0, -1, -1}),
+        new CamInfo(new Vector3(409.383f, 2.453f, -312.523f), Quaternion.Euler(40f, 260f, 0f), new int[] {-1, 3, -1, -1}),
+        new CamInfo(new Vector3(410.65f, 2.258f, -310.879f), Quaternion.Euler(30f, 90f, 0f), new int[] {-1, 1, -1, -1}),
+        new CamInfo(new Vector3(412.26f, 2.722f, -305.16f), Quaternion.Euler(0f, 270f, 0f), new int[] {-1, -1, -1, -1}),
+    };
+    GameObject[] MoveButton = new GameObject[4];
     public float mvSpeed = 1.0f;
     public float rtSpeed = 1.0f;
-    Transform targetPos;
+    Vector3 targetPos;
+    Quaternion targetRot;
     Vector3 fromPos = new Vector3();
     Quaternion fromRot = new Quaternion();
-    int clickLayer = 9;
-    bool isMoving = false;
-    public List<Transform> pos = new List<Transform>();
+    int cur = 0;
+    bool isMove = false;
     void Start()
     {
-        targetPos = GameObject.Find("campos_1").transform;
-        for(int i = 1; i < 20; i++)
+        gameObject.transform.SetPositionAndRotation(ci[0].pos, ci[0].rot);
+        for (int i = 0; i < 4; i++)
         {
-            pos.Add(GameObject.Find("campos_" + i).transform);
+            MoveButton[i] = GameObject.Find("MoveButton_" + i);
+            MoveButton[i].SetActive(ci[0].mb[i] >= 0);
         }
-        targetPos.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-        if (Input.GetMouseButtonUp(0) && !isMoving)
+        if (isMove)
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hitInfo;
-
-            if (Physics.Raycast(ray, out hitInfo, 100f))
+            transform.position = Vector3.MoveTowards(transform.position, targetPos,
+            Vector3.Distance(fromPos, targetPos) * mvSpeed * Time.deltaTime);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRot,
+                Quaternion.Angle(fromRot, targetRot) * Time.deltaTime * rtSpeed);
+            if (transform.position == targetPos
+            && transform.rotation == targetRot)
             {
-                int l = hitInfo.transform.parent.gameObject.layer;
-                if (l == clickLayer)
+                isMove = false;
+                for (int i = 0; i < 4; i++)
                 {
-                    targetPos.gameObject.SetActive(true);
-                    string targetName = hitInfo.transform.parent.name;
-                    string index = "";
-                    for (int i = 0; i < targetName.Length; i++)
-                    {
-                        if (targetName[i] == '_')
-                        {
-                            for (int j = i + 1; j < targetName.Length; j++)
-                            {
-                                index += targetName[j];
-                            }
-                            break;
-                        }
-                    }
-                    targetPos = pos[Int32.Parse(index) - 1];
-                    fromPos = transform.position;
-                    fromRot = transform.rotation;
-                    isMoving = true;
+                    MoveButton[i].SetActive(ci[cur].mb[i] >= 0);
                 }
             }
         }
-        if (isMoving)
-        {
-            MovePos();
-        }
     }
-    void MovePos()
+
+    public void MoveCam(int n)
     {
-        transform.position = Vector3.MoveTowards(transform.position, targetPos.position,
-            Vector3.Distance(fromPos, targetPos.position) * mvSpeed * Time.deltaTime);
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetPos.rotation,
-            Quaternion.Angle(fromRot, targetPos.rotation) * Time.deltaTime * rtSpeed);
-        if (transform.position == targetPos.position
-            && transform.rotation == targetPos.rotation)
+        if(isMove == false)
         {
-            targetPos.gameObject.SetActive(false);
-            isMoving = false;
+            if (n < 0)
+                cur = -n;
+            else
+                cur = ci[cur].mb[n];
+            targetPos = ci[cur].pos;
+            targetRot = ci[cur].rot;
+            fromPos = transform.position;
+            fromRot = transform.rotation;
+            isMove = true;
         }
     }
 }
