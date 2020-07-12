@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-
 public class GameManager : MonoBehaviour
 {
     public CameraMove cm;
     public ItemManager im;
-   
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -24,41 +23,28 @@ public class GameManager : MonoBehaviour
             if (Physics.Raycast(ray, out hitInfo, 100f))
             {
                 string targetName = hitInfo.collider.gameObject.name;
-                Debug.Log(targetName);
                 string index = "";
-                if (targetName[0] == 'i')
+                if (hitInfo.collider.gameObject.tag == "Trick")
                 {
-                    string str = "";
-                    for (int i = 1; i < 4; i++)
-                    {
-                        str += targetName[i];
-                    }
-                    if (str == "tem")
-                    {
-                        for (int i = 5; i < targetName.Length; i++)
-                        {
-                            index += targetName[i];
-                        }
-                        Destroy(hitInfo.collider.gameObject);
-                        im.In(int.Parse(index));
-                    }
+                    if (hitInfo.collider.gameObject.GetComponent<TrickManager>().Check(im.selectItem) == 1)
+                        im.Out(im.selectItem);
                 }
-                else if (targetName[0] == 'd')
+                if (hitInfo.collider.gameObject.tag == "Item")
                 {
-                    string str = "";
-                    for(int i = 1; i < 4; i++)
+                    for (int i = 5; i < targetName.Length; i++)
                     {
-                        str += targetName[i];
+                        index += targetName[i];
                     }
-                    if (str == "oor")
+                    Destroy(hitInfo.collider.gameObject);
+                    im.In(int.Parse(index));
+                }
+                else if (hitInfo.collider.gameObject.tag == "door")
+                {
+                    for(int i = 5; i < targetName.Length; i++)
                     {
-                        for(int i = 5; i < targetName.Length; i++)
-                        {
-                            index += targetName[i];
-                        }
-                        Debug.Log(int.Parse(index));
-                        cm.FadeCam(int.Parse(index));
+                        index += targetName[i];
                     }
+                    cm.FadeCam(int.Parse(index));
                 }
                 else
                 {
@@ -70,7 +56,6 @@ public class GameManager : MonoBehaviour
                             {
                                 index += targetName[j];
                             }
-                            Debug.Log(int.Parse(index));
                             cm.MoveCam(-int.Parse(index));
                             break;
                         }

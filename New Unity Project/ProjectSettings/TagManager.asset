@@ -4,7 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Slot
+  - Door
+  - Item
+  - Trick
   layers:
   - Default
   - TransparentFX

@@ -9,6 +9,7 @@ public class ItemManager : MonoBehaviour
     public Texture[] item; // public 바꿀것
     GameObject[] slotItem = new GameObject[8];
     int[] icode = new int[8];
+    public int selectItem = -1;
     int i = 0;
     // Start is called before the first frame update
     void Start()
@@ -59,7 +60,10 @@ public class ItemManager : MonoBehaviour
 
     public void Out(int n)
     {
-        icode[--i] = -1;
+        i--;
+        for (int i = 0; i < 8; i++)
+            if (icode[i] == n)
+                icode[i] = -1;
         Array.Sort(icode);
         for (int i = 0; i < 8; i++)
         {
@@ -76,6 +80,7 @@ public class ItemManager : MonoBehaviour
 
     public void Select(int n)
     {
-
+        slotItem[i].GetComponent<RawImage>().uvRect = new Rect(0, 0, 1.2f, 1.2f);
+        selectItem = icode[n];
     }
 }
