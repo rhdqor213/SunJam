@@ -159,6 +159,7 @@
      <Compile Include="Assets\Resources\AssetStore\Table and chair\Standard Assets\Effects\ImageEffects\Scripts\Vortex.cs" />
      <Compile Include="Assets\Scripts\CameraMove.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Scripts\ItemManager.cs" />
      <Compile Include="Assets\Scripts\SceneChange.cs" />
      <Compile Include="Assets\Scripts\Setting.cs" />
      <Compile Include="Assets\Scripts\TextManager.cs" />

@@ -6,6 +6,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public CameraMove cm;
+    public ItemManager im;
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +26,24 @@ public class GameManager : MonoBehaviour
                 string targetName = hitInfo.collider.gameObject.name;
                 Debug.Log(targetName);
                 string index = "";
-                if (targetName[0] == 'd')
+                if (targetName[0] == 'i')
+                {
+                    string str = "";
+                    for (int i = 1; i < 4; i++)
+                    {
+                        str += targetName[i];
+                    }
+                    if (str == "tem")
+                    {
+                        for (int i = 5; i < targetName.Length; i++)
+                        {
+                            index += targetName[i];
+                        }
+                        Destroy(hitInfo.collider.gameObject);
+                        im.In(int.Parse(index));
+                    }
+                }
+                else if (targetName[0] == 'd')
                 {
                     string str = "";
                     for(int i = 1; i < 4; i++)

@@ -66,7 +66,7 @@ public class CameraMove : MonoBehaviour
 
     void Start()
     {
-        Fader = GameObject.FindGameObjectWithTag("fader");
+        Fader = GameObject.Find("Fader");
         fader = Fader.GetComponent<Image>();
         Fader.SetActive(false);
 

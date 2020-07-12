@@ -9,10 +9,7 @@ public class TextManager : MonoBehaviour
     public Text textt;
     string[,,] ss = new string[,,] {
         {
-            { "주인공", "가나" },
-            { "주인공", "다라" },
-            { "주인공", "마바" },
-            { "주인공", "사아" },
+            {"주인공", "..."}
         },
     };
     int n = 0, m = 0;
