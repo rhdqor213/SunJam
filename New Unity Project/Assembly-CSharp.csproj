@@ -163,7 +163,6 @@
      <Compile Include="Assets\Scripts\SceneChange.cs" />
      <Compile Include="Assets\Scripts\Setting.cs" />
      <Compile Include="Assets\Scripts\TextManager.cs" />
-     <Compile Include="Assets\Scripts\TextureScaler.cs" />
      <Compile Include="Assets\Scripts\TrickManager.cs" />
      <None Include="Assets\Resources\AssetStore\Table and chair\Standard Assets\Effects\ImageEffects\Shaders\Tonemapper.shader" />
      <None Include="Assets\Resources\AssetStore\RoomEscape001\PostProcessing\Resources\Shaders\ScreenSpaceReflection.shader" />
