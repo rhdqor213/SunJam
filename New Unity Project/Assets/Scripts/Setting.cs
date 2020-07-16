@@ -32,4 +32,27 @@ public class Setting : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
+
+    public void OnButton(int n)
+    {
+        switch (n)
+        {
+            case 0:
+                OnShow();
+                break;
+            case 1:
+                Debug.Log("Save");
+                break;
+            case 2:
+                Debug.Log("Load");
+                break;
+            case 3:
+                Debug.Log("Setting");
+                break;
+            case 4:
+                Debug.Log("Quit");
+                Application.Quit();
+                break;
+        }
+    }
 }
