@@ -47,6 +47,7 @@ public class CameraMove : MonoBehaviour
         new CamInfo(new Vector3(406.11f, 2.722f, -305.16f), Quaternion.Euler(0f, 90f, 0f), new int[] {-1, 8, -1, -1}, new bool[] {false, false, false, false}),
         new CamInfo(new Vector3(390.24f, 2.722f, -306.25f), Quaternion.Euler(0f, 260f, 0f), new int[] {-1, -1, 21, 21}, new bool[] {false, false, false, false}),
         new CamInfo(new Vector3(387.21f, 2.722f, -306.17f), Quaternion.Euler(0f, 80f, 0f), new int[] {-1, -1, 20, 20}, new bool[] {false, false, false, false}),
+        new CamInfo(new Vector3(411.338f, 1.478f, -311.048f), Quaternion.Euler(0f, 90f, 0f), new int[] {-1, 6, -1, -1}, new bool[] {false, false, false, false}),
     };
     GameObject[] MoveButton = new GameObject[4];
     GameObject[] Block = new GameObject[4];
@@ -59,8 +60,8 @@ public class CameraMove : MonoBehaviour
     GameObject Fader;
     Image fader;
     int cur = 0;
-    bool isMove = false;
-    bool isFade = false;
+    public bool isMove = false;
+    public bool isFade = false;
     float timer = 0f;
 
     void Start()

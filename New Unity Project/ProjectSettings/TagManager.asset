@@ -7,6 +7,7 @@ TagManager:
   - Door
   - Item
   - Trick
+  - NumKey
   layers:
   - Default
   - TransparentFX
