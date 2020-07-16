@@ -68,7 +68,6 @@ public class CameraMove : MonoBehaviour
         Fader = GameObject.Find("Fader");
         fader = Fader.GetComponent<Image>();
         Fader.SetActive(false);
-
         gameObject.transform.SetPositionAndRotation(ci[0].pos, ci[0].rot);
         for (int i = 0; i < 4; i++)
         {

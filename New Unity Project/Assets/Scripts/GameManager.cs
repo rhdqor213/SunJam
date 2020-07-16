@@ -8,11 +8,13 @@ public class GameManager : MonoBehaviour
     public ItemManager im;
     public GameObject shortHand;
     public GameObject longHand;
+    public GameObject Set;
     public float timeSpeed = 1.0f;
     RectTransform sh;
     RectTransform lh;
     float timer;
     bool isRun = false;
+    Setting setting;
 
     // Start is called before the first frame update
     void Start()
@@ -21,13 +23,14 @@ public class GameManager : MonoBehaviour
         isRun = true;
         sh = shortHand.GetComponent<RectTransform>();
         lh = longHand.GetComponent<RectTransform>();
+        setting = Set.GetComponent<Setting>();
     }
 
     // Update is called once per frame
     void Update()
     {
         Clock();
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0) && !(setting.isPause))
         {
             ShootRay();
         }

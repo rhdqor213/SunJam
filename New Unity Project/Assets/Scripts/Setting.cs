@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Setting : MonoBehaviour
 {
-    int show = 0;
+    public bool isPause=false;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,15 +19,40 @@ public class Setting : MonoBehaviour
 
     public void OnShow()
     {
-        if (show == 0)
+        if (!isPause)
         {
-            show = 1;
+            isPause = true;
+            Time.timeScale = 0;
             gameObject.SetActive(true);
         }
         else
         {
-            show = 0;
+            isPause = false;
+            Time.timeScale = 1;
             gameObject.SetActive(false);
+        }
+    }
+
+    public void OnButton(int n)
+    {
+        switch (n)
+        {
+            case 0:
+                OnShow();
+                break;
+            case 1:
+                Debug.Log("Save");
+                break;
+            case 2:
+                Debug.Log("Load");
+                break;
+            case 3:
+                Debug.Log("Setting");
+                break;
+            case 4:
+                Debug.Log("Quit");
+                Application.Quit();
+                break;
         }
     }
 }
